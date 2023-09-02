@@ -151,7 +151,7 @@ fn main() {
                         let u = (f64::from(w) + rng.gen::<f64>()) / f64::from(width);
                         let v = (f64::from(h) + rng.gen::<f64>()) / f64::from(height);
                         let r = &camera.get_ray(u, v);
-                        col = col + color(&r, &world, 0);
+                        col = col + color(r, &world, 0);
                     }
                     col = col / f64::from(ray_per_pixel);
                     col = Vec3::new(col.x.sqrt(), col.y.sqrt(), col.z.sqrt());
